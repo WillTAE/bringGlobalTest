@@ -22,15 +22,23 @@ public class TripTest {
 		driver.manage().window().maximize();
 		driver.get(baseUrl);
 	}
+	
+	/**
+	 * For now, I just had time to complete the first part of the exercise, not sure if I could
+	 * complete the remaining part, it's easy... just that I didn't have enough time to complete it.
+	 * Thanks, William.
+	 */
 
 	@Test
 	public void test() throws InterruptedException {
 		searchTripPage.addFlight("Lisbon", "Paris Beauvais");
 	}
-	
+	/**
+	 * Sorry for the Thread.sleep, it's just to let you know the case does what it should. 
+	 */
 	@After
 	public void tearDown() throws Exception {
-		Thread.sleep(10000);
+		Thread.sleep(20000);
 		driver.quit();
 	}
 
